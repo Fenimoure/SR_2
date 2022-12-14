@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.objoriprog.sr2.sr_2.HelloController">
+   <children>
+      <RadioButton fx:id="false_toggle" layoutX="24.0" layoutY="83.0" mnemonicParsing="false" onAction="#setTOut" onKeyTyped="#setTOut_onKey" onMouseClicked="#setTOut" text="Хибна">
+         <toggleGroup>
+            <ToggleGroup fx:id="Toggles" />
+         </toggleGroup></RadioButton> <!--onKeyPressed="#setFalse"-->
+      <RadioButton fx:id="mid_toggle" layoutX="24.0" layoutY="113.0" mnemonicParsing="false" onAction="#setTOut" onKeyTyped="#setTOut_onKey" onMouseClicked="#setTOut" text="Граничний випадок" toggleGroup="$Toggles" />
+      <RadioButton fx:id="true_toggle" layoutX="24.0" layoutY="143.0" mnemonicParsing="false" onAction="#setTOut" onKeyTyped="#setTOut_onKey" onMouseClicked="#setTOut" text="Істинна" toggleGroup="$Toggles" />
+      <RadioButton fx:id="all_toggle" layoutX="24.0" layoutY="171.0" mnemonicParsing="false" onAction="#setTOut" onKeyTyped="#setTOut_onKey" onMouseClicked="#setTOut" text="Показати усі" toggleGroup="$Toggles" />
+      <Spinner fx:id="counter" layoutX="106.0" layoutY="216.0" prefHeight="26.0" prefWidth="64.0" />
+      <Label layoutX="14.0" layoutY="40.0" text="Умова:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="101.0" fitWidth="200.0" layoutX="224.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@screen.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="AboutButton" layoutX="22.0" layoutY="352.0" mnemonicParsing="false" onAction="#openAboutWindow" text="Про Автора" />
+      <Button fx:id="ExitButton" layoutX="134.0" layoutY="352.0" mnemonicParsing="false" onAction="#exitProgram" text="Вихід" />
+      <TextArea fx:id="outTField" editable="false" layoutX="224.0" layoutY="85.0" prefHeight="293.0" prefWidth="200.0" promptText="Оберіть умову." wrapText="true" />
+      <Text layoutX="15.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Значень згенерувати:" wrappingWidth="136.0" />
+   </children>
+</AnchorPane>
